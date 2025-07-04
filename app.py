@@ -4,17 +4,16 @@ import tensorflow as tf
 import pandas as pd
 import pickle 
 from sklearn.preprocessing import OneHotEncoder, LabelEncoder, StandardScaler
-
-with open('C:/Projects/AIML/ANN/one_hot_encoderv2.pkl','rb') as file:
+with open('one_hot_encoderv2.pkl','rb') as file:
     one_hot_encoder = pickle.load(file)
 
-with open ('C:/Projects/AIML/ANN/label_encoder.pkl','rb') as file:
+with open ('label_encoder.pkl','rb') as file:
     label_encoder = pickle.load(file)
 
-with open('C:/Projects/AIML/ANN/scaler.pkl','rb') as file:
+with open('scaler.pkl','rb') as file:
     scaler= pickle.load(file)
 
-model = tf.keras.models.load_model('C:/Projects/AIML/ANN/model.h5')
+model = tf.keras.models.load_model('model.h5')
 
 st.title('Customer Churn Prediction')
 
