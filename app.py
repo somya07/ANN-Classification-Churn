@@ -13,7 +13,7 @@ with open ('label_encoder.pkl','rb') as file:
 with open('scaler.pkl','rb') as file:
     scaler= pickle.load(file)
 
-model = tf.keras.models.load_model('model.h5')
+model = tf.keras.models.load_model('model.h5',compile=False)
 
 st.title('Customer Churn Prediction')
 
